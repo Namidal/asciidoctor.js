@@ -11,7 +11,7 @@ install:
 build_script:
 - node npm/appveyor.js
 - node npm/test/unsupported-features.js
-- node npm/test/jasmine-bower.js
+- node npm/test/jasmine-browser.js
 - node npm/test/jasmine-npm.js
 - node npm/test/jasmine-webpack.js
 - karma start
