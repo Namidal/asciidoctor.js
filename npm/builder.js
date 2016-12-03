@@ -346,7 +346,6 @@ Builder.prototype.compile = function (callback) {
   callback();
 };
 
-
 Builder.prototype.patchAsciidoctorCore = function (callback) {
   log.task('Patch Asciidoctor core');
   var path = 'build/asciidoctor-lib.js';
@@ -355,7 +354,7 @@ Builder.prototype.patchAsciidoctorCore = function (callback) {
   data = data.replace(/path\['\$start_with\?'\]\("file:\/\/\/"\)/g, 'path[\'\$start_with?\']("file://")');
   fs.writeFileSync(path, data, 'utf8');
   callback();
-}
+};
 
 Builder.prototype.replaceUnsupportedFeatures = function (callback) {
   log.task('Replace unsupported features');
